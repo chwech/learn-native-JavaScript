@@ -28,5 +28,5 @@ var getJSON = function(url) {
 getJSON('/posts.json').then(function(json){
     console.log('Contents: ' + json);
 }, function(error){
-    console.log('出错了'error);
+    console.log('出错了', error);
 });
