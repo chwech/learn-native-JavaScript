@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="tutorial" width="300" height="300">
+    你的浏览器不支持canvas,请升级你的浏览器
+  </canvas>
+
+  <script>
+    var canvas = document.getElementById('tutorial');
+    var ctx = canvas.getContext('2d');
+
+    if (canvas.getContext){
+      //获得 2d 上下文对象
+
+      var ctx = canvas.getContext('2d');
+      // drawing code here
+
+      // <canvas> 只支持一种原生的 图形绘制：矩形。所有其他图形都至少需要生成一种路径(path)。
+      ctx.fillRect(10, 10, 100, 50);  //绘制矩形,填充的默认颜色为黑色
+    } else {
+      // canvas-unsupported code here
+    }
+  </script>
+</body>
+</html>
